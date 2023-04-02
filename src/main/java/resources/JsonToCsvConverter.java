@@ -13,7 +13,7 @@ import com.opencsv.CSVWriter;
 public class JsonToCsvConverter {
     public static void main(String[] args) throws IOException {
         // Load JSON data from file
-        File jsonFile = new File("src/main/java/datasoruce/jsondata2.json");
+        File jsonFile = new File("src/main/java/datasoruce/jsondata.json");
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode rootNode = objectMapper.readTree(jsonFile);
 
@@ -22,7 +22,7 @@ public class JsonToCsvConverter {
         extractColumnNames(rootNode, "", columnNames);
 
         // Create CSV writer and write header row
-        File csvFile = new File("src/main/java/datasoruce/jsondata2.csv");
+        File csvFile = new File("src/main/java/datasoruce/jsondata.csv");
         FileWriter fileWriter = new FileWriter(csvFile);
         CSVWriter csvWriter = new CSVWriter(fileWriter);
         csvWriter.writeNext(columnNames.toArray(new String[0]));
