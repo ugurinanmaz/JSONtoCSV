@@ -1,2 +1,2 @@
-"name","age","email","address.street","address.city","address.state","address.zip","phone_numbers.0.type","phone_numbers.0.number","phone_numbers.1.type","phone_numbers.1.number"
-"John Doe","30","johndoe@example.com","123 Main St","Anytown","CA","12345","home","555-1234","work","555-5678"
+"widget.debug","widget.window.title","widget.window.name","widget.window.width","widget.window.height","widget.image.src","widget.image.name","widget.image.hOffset","widget.image.vOffset","widget.image.alignment","widget.text.data","widget.text.size","widget.text.style","widget.text.name","widget.text.hOffset","widget.text.vOffset","widget.text.alignment","widget.text.onMouseUp"
+"on","Sample Konfabulator Widget","main_window","500","500","Images/Sun.png","sun1","250","250","center","Click Here","36","bold","text1","250","100","center","sun1.opacity = (sun1.opacity / 100) * 90;"
