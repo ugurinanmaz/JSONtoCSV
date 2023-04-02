@@ -12,27 +12,23 @@ import com.opencsv.CSVWriter;
 
 public class JsonToCsvConverter {
     public static void main(String[] args) throws IOException {
-        // Load JSON data from file
+
         File jsonFile = new File("src/main/java/datasoruce/jsondata.json");
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode rootNode = objectMapper.readTree(jsonFile);
 
-        // Extract column names from JSON data
         List<String> columnNames = new ArrayList<>();
         extractColumnNames(rootNode, "", columnNames);
 
-        // Create CSV writer and write header row
         File csvFile = new File("src/main/java/datasoruce/jsondata.csv");
         FileWriter fileWriter = new FileWriter(csvFile);
         CSVWriter csvWriter = new CSVWriter(fileWriter);
         csvWriter.writeNext(columnNames.toArray(new String[0]));
 
-        // Write data rows
         List<String> dataRow = new ArrayList<>();
         extractData(rootNode, dataRow);
         csvWriter.writeNext(dataRow.toArray(new String[0]));
 
-        // Close CSV writer and file writer
         csvWriter.close();
         fileWriter.close();
     }
