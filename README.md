@@ -26,7 +26,7 @@
         </li>
         <li>
           Navigate to the project directory in a terminal or command prompt:
-          <pre><code>cd JSONtoDot</code></pre>
+          <pre><code>cd JSONtoCSV</code></pre>
         </li>
         <li>
           Run <code>mvn clean package</code> to build the project and create an
