@@ -1,0 +1,2 @@
+"name","age","email","address.street","address.city","address.state","address.zip","phone_numbers.0.type","phone_numbers.0.number","phone_numbers.1.type","phone_numbers.1.number"
+"John Doe","30","johndoe@example.com","123 Main St","Anytown","CA","12345","home","555-1234","work","555-5678"

@@ -1,0 +1,74 @@
+{
+  "employees": [
+    {
+      "name": "John Doe",
+      "age": 30,
+      "email": "johndoe@example.com",
+      "address": {
+        "street": "123 Main St",
+        "city": "Anytown",
+        "state": "CA",
+        "zip": "12345"
+      },
+      "phone_numbers": [
+        {
+          "type": "home",
+          "number": "555-1234"
+        },
+        {
+          "type": "work",
+          "number": "555-5678"
+        }
+      ]
+    },
+    {
+      "name": "Jane Smith",
+      "age": 25,
+      "email": "janesmith@example.com",
+      "address": {
+        "street": "456 Elm St",
+        "city": "Anytown",
+        "state": "CA",
+        "zip": "12345"
+      },
+      "phone_numbers": [
+        {
+          "type": "home",
+          "number": "555-9876"
+        },
+        {
+          "type": "cell",
+          "number": "555-5432"
+        }
+      ]
+    }
+  ],
+  "departments": [
+    {
+      "name": "Sales",
+      "employees": [
+        {
+          "name": "John Doe",
+          "title": "Sales Manager"
+        },
+        {
+          "name": "Jane Smith",
+          "title": "Sales Associate"
+        }
+      ]
+    },
+    {
+      "name": "Marketing",
+      "employees": [
+        {
+          "name": "Bob Johnson",
+          "title": "Marketing Manager"
+        },
+        {
+          "name": "Sarah Lee",
+          "title": "Marketing Associate"
+        }
+      ]
+    }
+  ]
+}
