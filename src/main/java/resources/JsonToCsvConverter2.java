@@ -1,24 +1,18 @@
 package resources;
 
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Random;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.opencsv.CSVReader;
-import com.opencsv.CSVReaderBuilder;
 import com.opencsv.CSVWriter;
-import com.opencsv.exceptions.CsvException;
 
-public class JsonToCsvConverter {
-    public static void main(String[] args) throws IOException, CsvException {
+public class JsonToCsvConverter2 {
+    public static void main(String[] args) throws IOException {
 
-        // Convert JSON to CSV
         File jsonFile = new File("src/main/java/datasoruce/jsondata.json");
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode rootNode = objectMapper.readTree(jsonFile);
@@ -37,38 +31,6 @@ public class JsonToCsvConverter {
 
         csvWriter.close();
         fileWriter.close();
-
-        // Modify CSV file to add a new row with random value
-        CSVReader reader = new CSVReaderBuilder(new FileReader("src/main/java/datasoruce/jsondata.csv")).withSkipLines(1).build();
-        List<String[]> csvData = null;
-        try {
-            csvData = reader.readAll();
-        } catch (CsvException e) {
-            throw new RuntimeException(e);
-        }
-        reader.close();
-
-        String[] newRow = new String[csvData.get(0).length];
-        newRow[0] = String.valueOf((int) (Math.random() * 100)); // Set random value in first column
-
-        fileWriter = new FileWriter("src/main/java/datasoruce/jsandata_testcases.csv");
-        csvWriter = new CSVWriter(fileWriter);
-
-        csvWriter.writeNext(csvData.get(0)); // Write header row
-        csvWriter.writeNext(newRow); // Write new row
-
-        for (int i = 1; i < csvData.size(); i++) {
-            csvWriter.writeNext(csvData.get(i)); // Write remaining data rows
-        }
-
-        csvWriter.close();
-        fileWriter.close();
-
-        modifyCsv();
-
-    }
-
-    private static void modifyCsv() {
     }
 
     private static void extractColumnNames(JsonNode node, String prefix, List<String> columnNames) {
