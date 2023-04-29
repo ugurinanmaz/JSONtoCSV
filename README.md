@@ -22,7 +22,7 @@
       <ol>
         <li>
           Clone this repository to your local machine:
-          <pre><code>git clone https://github.com/ugurinanmaz/JSONtoDot.git</code></pre>
+          <pre><code>git clone https://github.com/ugurinanmaz/JSONtoCSV.git</code></pre>
         </li>
         <li>
           Navigate to the project directory in a terminal or command prompt:
